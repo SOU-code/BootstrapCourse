@@ -380,7 +380,8 @@
               <label for="name" class="form-label">Name:</label>
               <div class="input-group">
                 <span class="tt" data-bs-placement="bottom" title="Enter Name">
-                <span class="input-group-text">N</span></span>
+                  <span class="input-group-text">N</span></span
+                >
                 <input
                   type="text"
                   class="form-control"
@@ -391,8 +392,12 @@
             <div class="mb-3">
               <label for="about" class="form-label">Question About:</label>
               <div class="input-group">
-                <span class="tt" data-bs-placement="bottom" title="Select Question Topic">
-                <span class="input-group-text">S</span></span>
+                <span
+                  class="tt"
+                  data-bs-placement="bottom"
+                  title="Select Question Topic">
+                  <span class="input-group-text">S</span></span
+                >
                 <select class="form-select" id="about">
                   <option selected>Pricing Related</option>
                   <option>Technical Problem</option>
@@ -414,15 +419,77 @@
         </div>
       </div>
     </section>
+    <!-- Get updates / modal trigger -->
+    <section class="bg-light">
+      <div class="container">
+        <div class="text-center">
+          <h2>Stay in The Loop</h2>
+          <p class="lead">Get the latest updates as they happen....</p>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-8 text-center">
+            <p class="text-muted my-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+              molestias eius rem corrupti accusamus, omnis incidunt suscipit,
+              quos doloribus laudantium blanditiis itaque enim cum expedita
+              aperiam nemo minima deleniti corporis ipsa autem porro. Quas
+              laudantium debitis, vitae, velit laborum iste, aspernatur qui
+              error optio quidem totam ullam facilis nobis illum!
+            </p>
+            <button
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#regModal">
+              Register for Updates
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Modal Itself -->
+    <div
+      class="modal fade"
+      id="regModal"
+      tabindex="-1"
+      aria-labelledby="regModal-title"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="regModal-title">
+              Get the Latest Updates
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla
+              voluptate suscipit accusantium omnis iusto voluptatibus. Nemo quas
+              repudiandae quos cumque modi facere ad est vero impedit animi,
+              sequi dolorum nesciunt!
+            </p>
+            <label for="modal-email" class="form-label">Enter email address:</label>
+            <input type="email" class="form-control" id="modal-email" placeholder="e.g. souvik@example.com">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"></script>
-      <script type="module">
-        const Tooltips=document.querySelectorAll(".tt");
-        Tooltips.forEach((each)=>{
-          new Bootstrap.Tooltips(each);
-        })
-      </script>
+    <script type="module">
+      const Tooltips = document.querySelectorAll(".tt");
+      Tooltips.forEach((each) => {
+        new Bootstrap.Tooltips(each);
+      });
+    </script>
   </body>
 </html>
